@@ -11,6 +11,7 @@
     --t-light-color: #FFFFFF;
     --t-logo-black-color: #000000;
     --t-gray-color: rgba(255, 255, 255, 0.6);
+    --header-border-bottom: #ECECEC; 
 
 /* Background colors*/
     --bgd-primary-color: #F5F5F5;
@@ -21,13 +22,12 @@
 /* Наявні кольори на сторінці "Студіо" */
     /*--color: #2F303A;
     /*--color: #FFFFFF 60%;
-    /*--color: #ECECEC;
+   
 
 /* Наявні кольори на сторінці "Портфоліо" */
     /*--color: #EEEEEE;
     /*--color: #FFFFFF 60%;
-    /*--color: #2F303A;
-    /*--color: #ECECEC; */
+    /*--color: #2F303A; */
 
 
 body {
@@ -38,16 +38,30 @@ body {
 }
 
 /* Utils */
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+}
+
 .link {
     text-decoration: none;
     color: currentColor;
 }
 .list {
-    list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;      
+}
+
+.img {
+    display: block;
 }
 
 /* Header */ 
-.header-logo {    
+.header {
+    border-bottom: 1px solid var(--header-border-bottom);
+}
+.header-logo {
+    margin: 24px 93px 25px 215px;    
     font-family: var(--secondary-font), sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -84,10 +98,14 @@ body {
 /* Main */
 /* Hero */
 .hero {
+    padding: 200px 452px;
+    margin-bottom: 94px;
     background: var(--bgd-secondary-color);
 }
 
 .hero-title {
+    margin-bottom: 30px;
+    width: 696px;
     font-weight: 900;
     font-size: 44px;
     line-height: calc(60 / 44);
@@ -97,7 +115,13 @@ body {
     color: var(--t-light-color);
 }
 
-.hero-button {
+.hero-button {  
+    display: inline-block;                                 
+    width: 216px;
+    height: 50px;
+    padding: 10px 29px;
+    margin-left: auto;
+    margin-right: auto;
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -108,10 +132,24 @@ body {
     letter-spacing: 0.06em;
     color: var(--t-light-color);
     background-color: var(--t-accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
     cursor: pointer;
 }
  /* Features-About */
+.about {
+    margin-right: 215px;
+    margin-bottom: 94px;
+    margin-left: 215px;
+}   
+.about-item {
+    width: 270px;
+    margin-right: 30px;
+    margin-bottom: 94px;
+}
+
 .about-subtitle {
+    margin-bottom: 10px;
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
@@ -125,6 +163,7 @@ body {
  
  /* Works and Team */
 .work-title, .team-title {
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: calc(42 / 36);
     text-align: center;
@@ -133,7 +172,16 @@ body {
 .team {
     background: var(--bgd-cinereous-color);
 }
+.team-item {
+    background: var(--bgd-light-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+.team-img {
+    margin-bottom: 30px;
+}
 .team-subtitle {
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: calc(19 / 16);
@@ -150,6 +198,9 @@ body {
 
 /* PORTFOLIO */
 .pf-button {
+    margin-right: 8px;
+    padding: 6px 25px;
+    height: 38px;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -160,24 +211,33 @@ body {
     background-color: var(--bgd-cinereous-color) ;
     cursor: pointer;
     border: none;
-    border-radius: 4px;
 }
 .pf-button:hover, 
 .pf-button:focus {
     color: var(--t-light-color);
     background-color: var(--t-accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
 .pf-item {
+    width: 370px;
     background-color: var(--bgd-light-color);
-
+}
+.pf-img {
+    margin-bottom: 20px;
 }
 .pf-title {
+    margin-bottom: 4px;
+    margin-left: 24px;
+    width: 322px;
     font-size: 18px;
     line-height: calc(36 / 18);
     letter-spacing: 0.06em;
 }
 
 .pf-text {
+    margin-left: 24px;
+    width: 322px;
     font-size: 16px;
     line-height:calc(30 / 16);
     letter-spacing: 0.03em;
