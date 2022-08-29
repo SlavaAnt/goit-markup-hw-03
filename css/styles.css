@@ -384,7 +384,7 @@ p {
   color: var(--t-accent-color);
 }
 .footer-item {
-  padding-top: 9px;
+  margin-top: 9px;
 }
 .footer-link {
   display: inline-block;
